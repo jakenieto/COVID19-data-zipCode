@@ -1,4 +1,4 @@
-FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active
+FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active,
 36103,Suffolk,New York,US,2020-04-18 22:32:47,40.88320119,-72.8012172,26143,693,0,25450,Suffolk, New York, US
 36103,Suffolk,New York,US,2020-04-19 23:41:01,40.88320119,-72.8012172,26888,693,0,26195,Suffolk, New York, US
 36103,Suffolk,New York,US,2020-04-20 23:36:47,40.88320119,-72.8012172,28127,859,0,27268,Suffolk, New York, US
