@@ -3,12 +3,15 @@ import csv
 from contextlib import closing
 import argparse
 from datetime import date, timedelta
-from helper import derivative, plotData,progressbar
+from helper import derivative, plotData,progressbar, csvify
 CONFIRMED_COL = 7
 DEATHS_COL = 8
 COUNTY_COL = 1
 STATE_COL= 2
 
+''' This function takes in the number of days from the current
+    date that it needs to gather and returns a list of all of 
+    those dates '''
 def getDates(days):
     day = date.today().day
     dates = []
@@ -18,15 +21,18 @@ def getDates(days):
         temp += timedelta(days=1)
               
     return dates
-
+''' This function finds the county code for a given zip code'''
 def findCountyCode(zip):
     oZip = zip
     url = "https://raw.githubusercontent.com/bgruber/zip2fips/master/zip2fips.json"
     failed_zips_count = 0
     fips = None
+    #continue to try and find county codes for incrememnting zip codes of the one inputed
     while fips == None:
         try:
+            #increment zip code and try again
             zip = int(zip) + failed_zips_count
+            #if zip code had leading zeros, add them back
             if len(str(zip)) < len(oZip):
                 for i in range (len(oZip) - len(str(zip))):
                     zip =  "0" + str(zip)
@@ -35,30 +41,40 @@ def findCountyCode(zip):
             if failed_zips_count < 20:
                 failed_zips_count += 1
             else:
+                #if no county found for any surrounding zip codes
                 print("Error: Zip code '" + str(oZip) + "' is not valid")
                 exit(-1)
     return fips
-
+''' This function takes in a zip code and number of days and returns a list of all of 
+    the data values'''
 def getData(zip,days):
     fips = findCountyCode(zip)
     dates = getDates(days)
     data = []
     first = True
-    for i in progressbar(range(len(dates)),"Fetching Data ...",40):
-        url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/" + dates[i] + ".csv"
-        with closing(requests.get(url,stream=True)) as r:
-            f = (line.decode('utf-8') for line in r.iter_lines())
-            reader = csv.reader(f, delimiter=',', quotechar='"')
-            for row in reader:
-                if len(row) == 0:
-                    break
-                if row[0] == '404: Not Found':
-                    break
-                if first:
-                    data.append(row)
-                    first = False
-                if row[0] == fips:
-                    data.append(row)
+    today = date.today().strftime("%m-%d-%Y")
+    with open("data/" + zip + "_" + today + "_" + str(days) + ".csv",mode="w+") as output:
+        for i in progressbar(range(len(dates)),"Fetching Data ...",40):
+            url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/" + dates[i] + ".csv"
+            with closing(requests.get(url,stream=True)) as r:
+                f = (line.decode('utf-8') for line in r.iter_lines())
+                reader = csv.reader(f, delimiter=',', quotechar='"')
+                counter = 0
+                for row in reader:
+                    if len(row) == 0:
+                        counter += 1
+                        break
+                    if row[0] == '404: Not Found':
+                        counter += 1
+                        break
+                    if first:
+                        data.append(row)
+                        output.writelines(csvify(row))
+                        first = False
+                    if row[0] == fips:
+                        data.append(row)
+                        output.writelines(csvify(row))
+                    counter += 1
     return data
 
 def graphData(confirm_data,death_data,county,state):

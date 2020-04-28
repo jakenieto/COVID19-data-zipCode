@@ -1,6 +1,10 @@
 import sys
 import matplotlib.pyplot as plt
 
+''' This function takes in a set of x-values, y-values
+    a starting x-value and starting y-value. The function
+    then aproximates the derivative over the  set of data
+    and then returns the y-values. '''
 def derivative(x,y,start,end):
     y_prime = []
     prevX = start
@@ -15,7 +19,9 @@ def derivative(x,y,start,end):
         prevY = y[i]
     return y_prime
 
-
+''' This function just takes in a "Data" dictionary that
+    contains all of the necessary info to properly plot a
+    graph in mathplotlib. '''
 def plotData(Data):
     plt.plot([day for day in range(0,Data["days"])], Data["data"])  
     plt.title(Data["title"])  
@@ -29,7 +35,8 @@ def plotData(Data):
     plt.show() 
 
 
-
+''' This function is used to create a progress bar when fetching
+    the data '''
 def progressbar(it, prefix="", size=60, file=sys.stdout):
     count = len(it)
     def show(j):
@@ -42,3 +49,13 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
         show(i+1)
     file.write("\n")
     file.flush()
+    
+''' Turns a row into a csv 'ready-to-write' string'''
+def csvify(row):
+    f = []
+    for ele in row:
+        f.append(ele)
+        f.append(",")
+    f = f[:len(f)-2]
+    f.append('\n')
+    return ''.join(f)
