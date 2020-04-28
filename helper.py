@@ -56,6 +56,6 @@ def csvify(row):
     for ele in row:
         f.append(ele)
         f.append(",")
-    f = f[:len(f)-1]
+    f = f[:len(f)-2]
     f.append('\n')
     return ''.join(f)

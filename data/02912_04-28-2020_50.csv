@@ -1,38 +1,38 @@
-FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active,Province_State,Country_Region
-44007,Providence,Rhode Island,US,3/22/20 23:45,41.87064746,-71.57753536,37,0,0,0,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-03-23 23:19:34,41.87064746,-71.57753536,52,0,0,0,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-03-24 23:37:31,41.87064746,-71.57753536,52,0,0,0,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-03-25 23:33:19,41.87064746,-71.57753536,52,0,0,0,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-03-26 23:48:35,41.87064746,-71.57753536,91,0,0,0,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-03-27 22:14:55,41.87064746,-71.57753536,91,0,0,0,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,3/28/20 23:05,41.87064746,-71.57753536,91,0,0,0,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,3/29/20 23:08,41.87064746,-71.57753536,156,0,0,0,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,3/30/20 22:52,41.87064746,-71.57753536,156,0,0,0,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-03-31 23:43:56,41.87064746,-71.57753536,208,0,0,0,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-01 21:58:49,41.87064746,-71.57753536,301,0,0,0,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,4/2/20 23:25,41.87064746,-71.57753536,418,0,0,0,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-03 22:46:37,41.87064746,-71.57753536,418,3,0,0,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,4/4/20 23:34,41.87064746,-71.57753536,418,3,0,0,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-05 23:06:45,41.87064746,-71.57753536,491,3,0,0,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,4/6/20 23:22,41.87064746,-71.57753536,538,3,0,0,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-07 23:04:49,41.87064746,-71.57753536,622,3,0,0,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-08 22:51:58,41.87064746,-71.57753536,832,3,0,0,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-09 23:02:37,41.87064746,-71.57753536,832,3,0,0,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-10 22:54:07,41.87064746,-71.57753536,955,3,0,0,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-11 22:45:33,41.87064746,-71.57753536,1278,3,0,0,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-12 23:18:00,41.87064746,-71.57753536,1278,3,0,1275,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-13 23:07:54,41.87064746,-71.57753536,1278,3,0,1275,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-14 23:33:31,41.87064746,-71.57753536,1278,3,0,1275,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-15 22:56:51,41.87064746,-71.57753536,1957,3,0,1954,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-16 23:30:51,41.87064746,-71.57753536,2072,3,0,2069,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-17 23:30:52,41.87064746,-71.57753536,2703,3,0,2700,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-18 22:32:47,41.87064746,-71.57753536,2703,3,0,2700,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-19 23:41:01,41.87064746,-71.57753536,3014,3,0,3011,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-20 23:36:47,41.87064746,-71.57753536,3491,3,0,3488,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-21 23:30:50,41.87064746,-71.57753536,3727,3,0,3724,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-22 23:30:53,41.87064746,-71.57753536,4064,3,0,4061,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-24 03:30:50,41.87064746,-71.57753536,4350,0,0,4350,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-25 06:30:53,41.87064746,-71.57753536,4603,0,0,4603,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-26 02:30:51,41.87064746,-71.57753536,4916,0,0,4916,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-27 02:30:52,41.87064746,-71.57753536,5266,0,0,5266,Providence, Rhode Island, US
-44007,Providence,Rhode Island,US,2020-04-28 02:30:51,41.87064746,-71.57753536,5427,0,0,5427,Providence, Rhode Island, US
+FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active,
+44007,Providence,Rhode Island,US,3/22/20 23:45,41.87064746,-71.57753536,37,0,0,0,
+44007,Providence,Rhode Island,US,2020-03-23 23:19:34,41.87064746,-71.57753536,52,0,0,0,
+44007,Providence,Rhode Island,US,2020-03-24 23:37:31,41.87064746,-71.57753536,52,0,0,0,
+44007,Providence,Rhode Island,US,2020-03-25 23:33:19,41.87064746,-71.57753536,52,0,0,0,
+44007,Providence,Rhode Island,US,2020-03-26 23:48:35,41.87064746,-71.57753536,91,0,0,0,
+44007,Providence,Rhode Island,US,2020-03-27 22:14:55,41.87064746,-71.57753536,91,0,0,0,
+44007,Providence,Rhode Island,US,3/28/20 23:05,41.87064746,-71.57753536,91,0,0,0,
+44007,Providence,Rhode Island,US,3/29/20 23:08,41.87064746,-71.57753536,156,0,0,0,
+44007,Providence,Rhode Island,US,3/30/20 22:52,41.87064746,-71.57753536,156,0,0,0,
+44007,Providence,Rhode Island,US,2020-03-31 23:43:56,41.87064746,-71.57753536,208,0,0,0,
+44007,Providence,Rhode Island,US,2020-04-01 21:58:49,41.87064746,-71.57753536,301,0,0,0,
+44007,Providence,Rhode Island,US,4/2/20 23:25,41.87064746,-71.57753536,418,0,0,0,
+44007,Providence,Rhode Island,US,2020-04-03 22:46:37,41.87064746,-71.57753536,418,3,0,0,
+44007,Providence,Rhode Island,US,4/4/20 23:34,41.87064746,-71.57753536,418,3,0,0,
+44007,Providence,Rhode Island,US,2020-04-05 23:06:45,41.87064746,-71.57753536,491,3,0,0,
+44007,Providence,Rhode Island,US,4/6/20 23:22,41.87064746,-71.57753536,538,3,0,0,
+44007,Providence,Rhode Island,US,2020-04-07 23:04:49,41.87064746,-71.57753536,622,3,0,0,
+44007,Providence,Rhode Island,US,2020-04-08 22:51:58,41.87064746,-71.57753536,832,3,0,0,
+44007,Providence,Rhode Island,US,2020-04-09 23:02:37,41.87064746,-71.57753536,832,3,0,0,
+44007,Providence,Rhode Island,US,2020-04-10 22:54:07,41.87064746,-71.57753536,955,3,0,0,
+44007,Providence,Rhode Island,US,2020-04-11 22:45:33,41.87064746,-71.57753536,1278,3,0,0,
+44007,Providence,Rhode Island,US,2020-04-12 23:18:00,41.87064746,-71.57753536,1278,3,0,1275,
+44007,Providence,Rhode Island,US,2020-04-13 23:07:54,41.87064746,-71.57753536,1278,3,0,1275,
+44007,Providence,Rhode Island,US,2020-04-14 23:33:31,41.87064746,-71.57753536,1278,3,0,1275,
+44007,Providence,Rhode Island,US,2020-04-15 22:56:51,41.87064746,-71.57753536,1957,3,0,1954,
+44007,Providence,Rhode Island,US,2020-04-16 23:30:51,41.87064746,-71.57753536,2072,3,0,2069,
+44007,Providence,Rhode Island,US,2020-04-17 23:30:52,41.87064746,-71.57753536,2703,3,0,2700,
+44007,Providence,Rhode Island,US,2020-04-18 22:32:47,41.87064746,-71.57753536,2703,3,0,2700,
+44007,Providence,Rhode Island,US,2020-04-19 23:41:01,41.87064746,-71.57753536,3014,3,0,3011,
+44007,Providence,Rhode Island,US,2020-04-20 23:36:47,41.87064746,-71.57753536,3491,3,0,3488,
+44007,Providence,Rhode Island,US,2020-04-21 23:30:50,41.87064746,-71.57753536,3727,3,0,3724,
+44007,Providence,Rhode Island,US,2020-04-22 23:30:53,41.87064746,-71.57753536,4064,3,0,4061,
+44007,Providence,Rhode Island,US,2020-04-24 03:30:50,41.87064746,-71.57753536,4350,0,0,4350,
+44007,Providence,Rhode Island,US,2020-04-25 06:30:53,41.87064746,-71.57753536,4603,0,0,4603,
+44007,Providence,Rhode Island,US,2020-04-26 02:30:51,41.87064746,-71.57753536,4916,0,0,4916,
+44007,Providence,Rhode Island,US,2020-04-27 02:30:52,41.87064746,-71.57753536,5266,0,0,5266,
+44007,Providence,Rhode Island,US,2020-04-28 02:30:51,41.87064746,-71.57753536,5427,0,0,5427,

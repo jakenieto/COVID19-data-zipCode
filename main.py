@@ -11,7 +11,7 @@ STATE_COL= 2
 header = [
             "FIPS","Admin2","Province_State","Country_Region",
             "Last_Update","Lat,Long_","Confirmed","Deaths","Recovered",
-            "Active","Province_State","Country_Region"
+            "Active","dummy",
          ]
 
 ''' This function takes in the number of days from the current
