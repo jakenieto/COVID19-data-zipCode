@@ -19,14 +19,28 @@ def getDates(days):
               
     return dates
 
+def findCountyCode(zip):
+    ogZip = zip
+    url = "https://raw.githubusercontent.com/bgruber/zip2fips/master/zip2fips.json"
+    failed_zips_count = 0
+    fips = None
+    while fips == None:
+        try:
+            zip = int(zip) + failed_zips_count
+            if len(str(zip)) < len(ogZip):
+                for i in range (len(ogZip) - len(str(zip))):
+                    zip =  "0" + str(zip)
+            fips = requests.get(url).json()[str(zip)]
+        except KeyError:
+            if failed_zips_count < 20:
+                failed_zips_count += 1
+            else:
+                print("Error: Zip code '" + str(ogZip) + "' is not valid")
+                exit(-1)
+    return fips
 
 def getData(zip,days):
-    url = "https://raw.githubusercontent.com/bgruber/zip2fips/master/zip2fips.json"
-    try:
-        fips = requests.get(url).json()[zip]
-    except KeyError:
-        print("Error: Zip code '" + zip + "' is not valid")
-        exit(-1)
+    fips = findCountyCode(zip)
     dates = getDates(days)
     data = []
     first = True
