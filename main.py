@@ -3,8 +3,7 @@ import csv
 from contextlib import closing
 import argparse
 from datetime import date, timedelta
-from helper import derivative, plotData
-
+from helper import derivative, plotData,progressbar
 CONFIRMED_COL = 7
 DEATHS_COL = 8
 COUNTY_COL = 1
@@ -27,8 +26,8 @@ def getData(zip,days):
     dates = getDates(days)
     data = []
     first = True
-    for d in dates :
-        url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/" + d + ".csv"
+    for i in progressbar(range(len(dates)),"Fetching Data ...",40):
+        url = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/" + dates[i] + ".csv"
         with closing(requests.get(url,stream=True)) as r:
             f = (line.decode('utf-8') for line in r.iter_lines())
             reader = csv.reader(f, delimiter=',', quotechar='"')
