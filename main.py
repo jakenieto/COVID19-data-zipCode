@@ -22,7 +22,11 @@ def getDates(days):
 
 def getData(zip,days):
     url = "https://raw.githubusercontent.com/bgruber/zip2fips/master/zip2fips.json"
-    fips = requests.get(url).json()[zip]
+    try:
+        fips = requests.get(url).json()[zip]
+    except KeyError:
+        print("Error: Zip code '" + zip + "' is not valid")
+        exit(-1)
     dates = getDates(days)
     data = []
     first = True
@@ -102,5 +106,11 @@ if __name__ == "__main__":
     parser.add_argument("-zip","--zip", required=True, help="US Zip code")
     parser.add_argument("-days","--days", default=30, help="How many days in the past")
     args = parser.parse_args()
-    print(main(args.zip,int(args.days)))
     
+    try:
+        assert(int(args.days) > 0)
+    except AssertionError:
+        print("Your must provide a non-zero, positive integer for the number of days.")
+        exit(-1)
+
+    print(main(args.zip,int(args.days)))
