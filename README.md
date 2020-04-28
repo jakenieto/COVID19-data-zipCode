@@ -1,6 +1,9 @@
 # COVID19-data-zipCode
 Python script that gets covid-19 data for a specific zip code and from the last number of specified days. 
-The data is then graphed. The data is sourced from: [https://github.com/CSSEGISandData/COVID-19]
+The data is then graphed. 
+
+data source: [https://github.com/CSSEGISandData/COVID-19]
+
 ## Dependencies 
     requests
     csv
