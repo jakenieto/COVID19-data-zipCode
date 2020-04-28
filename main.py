@@ -8,6 +8,10 @@ CONFIRMED_COL = 7
 DEATHS_COL = 8
 COUNTY_COL = 1
 STATE_COL= 2
+header = [
+            "FIPS","Admin2","Province_State","Country_Region",
+            "Last_Update","Lat,Long_","Confirmed","Deaths","Recovered","Active"
+         ]
 
 ''' This function takes in the number of days from the current
     date that it needs to gather and returns a list of all of 
@@ -68,8 +72,8 @@ def getData(zip,days):
                         counter += 1
                         break
                     if first:
-                        data.append(row)
-                        output.writelines(csvify(row))
+                        data.append(header)
+                        output.writelines(csvify(header))
                         first = False
                     if row[0] == fips:
                         data.append(row)
