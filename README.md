@@ -1,5 +1,5 @@
 # COVID19-data-zipCode
-Python script that gets covid-19 data for a specific zip code and from the last number of specified days. 
+Python script that gets covid-19 data for a specific zip code and from the last number of specified days. Data is stored to a csv file inside the data directory.
 The data is then graphed. 
 
 data source: [https://github.com/CSSEGISandData/COVID-19]
