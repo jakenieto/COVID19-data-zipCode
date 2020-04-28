@@ -43,17 +43,7 @@ def getData(zip,days):
                     data.append(row)
     return data
 
-def main(zip,days):
-    data = getData(zip,days)
-    county = ""
-    state = ""
-
-    if len(data) > 1:
-        county = data[1][COUNTY_COL]
-        state = data[1][STATE_COL]
-    
-    confirm_data = [int(con[CONFIRMED_COL]) for con in data[1:]]
-    death_data = [int(con[DEATHS_COL]) for con in data[1:]]
+def graphData(confirm_data,death_data,county,state):
     CONFIRM_dict = {
                 "days": len(confirm_data),
                 "data": confirm_data,
@@ -92,13 +82,25 @@ def main(zip,days):
         }
     plotData(DERIV_dict)
 
+
+def main(zip,days):
+    data = getData(zip,days)
+    county = ""
+    state = ""
+
+    if len(data) > 1:
+        county = data[1][COUNTY_COL]
+        state = data[1][STATE_COL]
+    
+    confirm_data = [int(con[CONFIRMED_COL]) for con in data[1:]]
+    death_data = [int(con[DEATHS_COL]) for con in data[1:]]
+    graphData(confirm_data,death_data,county,state)
     return {"cases":confirm_data, "deaths":death_data}
 
 if __name__ == "__main__":
-
-   
     parser = argparse.ArgumentParser(description='COVID-19 Graphs')
     parser.add_argument("-zip","--zip", required=True, help="US Zip code")
     parser.add_argument("-days","--days", default=30, help="How many days in the past")
     args = parser.parse_args()
     print(main(args.zip,int(args.days)))
+    
