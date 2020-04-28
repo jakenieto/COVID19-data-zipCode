@@ -1,4 +1,4 @@
-FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active
+FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active,Province_State,Country_Region
 44007,Providence,Rhode Island,US,3/22/20 23:45,41.87064746,-71.57753536,37,0,0,0,Providence, Rhode Island, US
 44007,Providence,Rhode Island,US,2020-03-23 23:19:34,41.87064746,-71.57753536,52,0,0,0,Providence, Rhode Island, US
 44007,Providence,Rhode Island,US,2020-03-24 23:37:31,41.87064746,-71.57753536,52,0,0,0,Providence, Rhode Island, US
