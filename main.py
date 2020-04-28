@@ -53,6 +53,7 @@ def main(zip,days):
         state = data[1][STATE_COL]
     
     confirm_data = [int(con[CONFIRMED_COL]) for con in data[1:]]
+    death_data = [int(con[DEATHS_COL]) for con in data[1:]]
     CONFIRM_dict = {
                 "days": len(confirm_data),
                 "data": confirm_data,
@@ -72,6 +73,27 @@ def main(zip,days):
         }
     plotData(DERIV_dict)
 
+    DEATHS_dict = {
+                "days": len(death_data),
+                "data": death_data,
+                "title": 'Confirmed deaths in ' + str(county) + " County, " + str(state),
+                "xlabel": 'Last ' + str(len(death_data)) + " days",
+                "ylabel": 'Number of Deaths'
+                
+        }
+    plotData(DEATHS_dict)
+    DERIV_dict = {
+                "days": len(death_data),
+                "data": derivative([i for i in range(0,len(death_data))],death_data,0,0),
+                "title": 'Derivative of Deaths in ' + str(county) + " County, " + str(state),
+                "xlabel": 'Last ' + str(len(confirm_data)) + " days",
+                "ylabel": 'Number of New Confirmed deaths/Day'
+                
+        }
+    plotData(DERIV_dict)
+
+    return {"cases":confirm_data, "deaths":death_data}
+
 if __name__ == "__main__":
 
    
@@ -79,4 +101,4 @@ if __name__ == "__main__":
     parser.add_argument("-zip","--zip", required=True, help="US Zip code")
     parser.add_argument("-days","--days", default=30, help="How many days in the past")
     args = parser.parse_args()
-    main(args.zip,int(args.days))
+    print(main(args.zip,int(args.days)))
