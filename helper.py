@@ -49,13 +49,13 @@ def progressbar(it, prefix="", size=60, file=sys.stdout):
         show(i+1)
     file.write("\n")
     file.flush()
-    
+
 ''' Turns a row into a csv 'ready-to-write' string'''
 def csvify(row):
     f = []
     for ele in row:
         f.append(ele)
         f.append(",")
-    f = f[:len(f)-2]
+    f = f[:len(f)-1]
     f.append('\n')
     return ''.join(f)
