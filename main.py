@@ -87,7 +87,13 @@ def graphData(confirm_data,death_data,county,state):
     plotData(DERIV_dict)
 
 
-def main(zip,days):
+def covid_zipcode(zip,days):  
+    try:
+        assert((days) > 0)
+    except AssertionError:
+        print("Your must provide a non-zero, positive integer for the number of days.")
+        exit(-1)
+
     data = getData(zip,days)
     county = ""
     state = ""
@@ -106,11 +112,4 @@ if __name__ == "__main__":
     parser.add_argument("-zip","--zip", required=True, help="US Zip code")
     parser.add_argument("-days","--days", default=30, help="How many days in the past")
     args = parser.parse_args()
-    
-    try:
-        assert(int(args.days) > 0)
-    except AssertionError:
-        print("Your must provide a non-zero, positive integer for the number of days.")
-        exit(-1)
-
-    print(main(args.zip,int(args.days)))
+    print(covid_zipcode(args.zip,int(args.days)))
